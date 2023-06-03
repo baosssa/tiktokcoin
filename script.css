@@ -1,0 +1,155 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Courier Prime', monospace;
+  background-image: linear-gradient(to top left, #7274d8 0%, #030c3f 100%);
+  background-repeat: no-repeat;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+  top: 2rem;
+
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.logo {
+  height: 18rem;
+}
+
+.text {
+  position: relative;
+  color: #e27979;
+  font-size: 5rem;
+}
+
+section {
+  width: 100%;
+  position: relative;
+  top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 55rem;
+  width: 110rem;
+  background-color: red;
+  box-shadow: 5rem 5rem 5rem 5rem rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  background-repeat: none;
+  background: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+/* borders  changes */
+.container::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: linear-gradient(#399953, #399953),
+    linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33),
+    linear-gradient(#00eeff, #00eeff), linear-gradient(#377af5, #377af5);
+
+  animation: rotate 4s linear infinite;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background-color: black;
+  border-radius: 5px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(3turn);
+  }
+}
+
+.box1 {
+  height: 100%;
+  width: 50%;
+  color: aliceblue;
+  font-size: 3rem;
+  border-right: solid 2px aliceblue;
+  overflow-y: auto;
+}
+
+.box2 {
+  height: 100%;
+  width: 50%;
+  color: aliceblue;
+  font-size: 3rem;
+  overflow-y: auto;
+}
+
+.header1,
+.header2 {
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  border-bottom: solid 2px aliceblue;
+
+  font-size: 2.8rem;
+}
+
+.crown {
+  height: 6rem;
+  width: 6rem;
+}
+
+#text1,
+#text2 {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.hed,
+.hed2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.p::after {
+  content: '3000';
+  color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+}
